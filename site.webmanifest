@@ -1,6 +1,16 @@
 {
   "name": "Raizian",
   "short_name": "Raizian",
+  "description": "Raizian is a next-generation skill learning platform powered by AI and certified mentors.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0cf",
+  "background_color": "#0a0a0a",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "technology", "learning"],
   "icons": [
     {
       "src": "/favicon-192x192.png",
@@ -12,8 +22,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#0cf",
-  "background_color": "#0a0a0a",
-  "display": "standalone"
+  ]
 }
