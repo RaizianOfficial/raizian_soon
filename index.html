@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -49,7 +49,7 @@
   <meta name="theme-color" content="#0a0a0a" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style/style.css" />
 
   <!-- Schema Markup (Structured Data) -->
   <script type="application/ld+json">
@@ -68,135 +68,210 @@
   }
   </script>
 </head>
+
 <body>
-  <main class="card" role="main" aria-labelledby="coming-soon-heading">
-    <section aria-label="Coming soon message">
-      <div class="logo" aria-hidden="true">
-        <img src="raizianlogo.png" alt="Raizian Logo" width="40" height="40" style="border-radius: 50px;">
-        <span>Raizian</span>
+
+  <nav>
+    <div class="logo">
+      <section>
+        <img src="raizianlogo.png" alt="raizianlogo">
+        <label class="shiny-text">Raizian</label>
+      </section>
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="nav-icons">
+      <button>Join Us</button>
+    </div>
+    <svg id="navOpen" xmlns="http://www.w3.org/2000/svg" fill="none" width="60px" height="60px" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+</svg>
+
+
+  </nav>
+
+  <div class="hdd-nav">
+    <div class="top-sec">
+      <button>Sign Up</button>
+      <div>
+        <a href="#"><i class='bx bx-rocket'></i></a>
+        <a href="#"><i class='bx bx-user'></i></a>
+      </div>
+    </div>
+    <div class="bot-sec">
+      <div class="links">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
       </div>
 
-      <h1 id="coming-soon-heading" class="hero-title">Stay Tuned for a great grand Launching</h1>
-      <p class="subtitle">
-        Raizian is a next-generation skill learning platform that empowers learners to master real-world skills through
-        certified mentors and AI-driven guidance. Learn practical skills, build your roadmap, and turn knowledge into
-        success — all in one platform.
+      <div class="info">
+        <h2>Raizian</h2>
+        <p>Raizian is a futuristic learning platform where creators master rewardable skills, leverage AI, and build real-world projects to grow, earn, and lead their future.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page1" id="home">
+
+    <div class="content">
+      <h1>The future belongs to <label class="shiny-text">Creators</label>. We’re here to build them</h1>
+      <p>Raizian is the movement rewriting how people learn, build, and conquer the future.
+We don’t follow trends — we create the next era of skills, AI, and innovation.
       </p>
-
-      <div class="features" role="list" aria-label="Key benefits">
-        <div class="feature" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" height="20" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor" class="size-6">
+      <div class="btncont">
+        <button id="raizianBtn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="#000"
+            class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round"
-              d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+              d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
           </svg>
 
-
-          <p><strong>Skill focused learning</strong><br><span style="color:var(--muted)">Master industry-relevant skills
-              that shape your future.</span></p>
-        </div>
-
-        <div class="feature" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" height="20" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
-          </svg>
-
-
-          <p><strong>AI-Powered Mentorship</strong><br><span style="color:var(--muted)">Get guided by Raizian AI and
-              certified human mentors.</span></p>
-        </div>
-
-        <div class="feature" role="listitem">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20" height="20" viewBox="0 0 24 24"
-            stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 0 1-.657.643 48.39 48.39 0 0 1-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 0 1-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 0 0-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 0 1-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 0 0 .657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 0 1-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 0 0 5.427-.63 48.05 48.05 0 0 0 .582-4.717.532.532 0 0 0-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 0 0 .658-.663 48.422 48.422 0 0 0-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 0 1-.61-.58v0Z" />
-          </svg>
-
-          <p><strong>Learn. Build. Earn.</strong><br><span style="color:var(--muted)">Turn skills into real projects and
-              visible results.</span></p>
-        </div>
-      </div>
-
-      <div class="meta" aria-hidden="false">
-        <a href="#" style="display:inline-flex;align-items:center;gap:8px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            aria-hidden="true">
-            <path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
-              d="M8 7V3M16 7V3M3 11h18M21 19H3V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12z" />
-          </svg>
-          Launching J22 2026
-        </a>
-
-        <a href="#" style="display:inline-flex;align-items:center;gap:8px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            aria-hidden="true">
-            <path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
-              d="M16 11V8a4 4 0 0 0-8 0v3M5 11h14v8H5z" />
-          </svg>
-          Great grands coming soon
-        </a>
-      </div>
-    </section>
-
-    <aside class="signup" aria-labelledby="signup-heading">
-      <h2 id="signup-heading" style="margin:0 0 10px 0; font-size:18px;">Get launch updates</h2>
-
-      <div id="success" class="success" role="status" aria-live="polite">
-
-        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-          aria-hidden="true">
-          <path stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
-            d="M12 20.5A8.5 8.5 0 1 0 12 3.5a8.5 8.5 0 0 0 0 17zM9.5 12.5l1.7 1.7L15 10" />
-        </svg>
-        <div>
-          <div style="font-weight:700">You're on the list.</div>
-          <div style="font-size:13px;color:var(--muted)">We’ll email you when Raizian will live.</div>
-        </div>
-      </div>
-
-      <form id="earlyForm" action="https://formspree.io/f/xldoqlgg" method="POST">
-        <label class="label" for="email">Work email</label>
-        <input id="email" name="email" class="input" type="email" inputmode="email" placeholder="you@company.com"
-          aria-describedby="email-help" required>
-
-        <div id="email-help" class="note">Be the first to know when Raizian goes live. No spam — only important updates.
-        </div>
-
-        <button id="submitBtn" class="btn" type="submit" style="width:100%;justify-content:center">
-
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            aria-hidden="true">
-            <path stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
-              d="M3 8l9 6 9-6M21 19H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2z" />
-          </svg>
-          Notify Me
+          Get Started
         </button>
-      </form>
+        <button id="learnBtn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="size-7">
+  <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+</svg>
 
-      <div style="display:flex;gap:10px;align-items:center;margin-top:16px;flex-wrap:wrap">
 
-        <a href="https://www.instagram.com/raizian.legacy/" aria-label="LinkedIn" title="LinkedIn"
-          style="text-decoration:none;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true" role="img">
-            <title>Instagram</title>
-            <rect x="3" y="3" width="18" height="18" rx="5" stroke="#000" stroke-width="1.5" fill="none" />
-            <circle cx="12" cy="12" r="3.2" stroke="#000" stroke-width="1.5" fill="none" />
-            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
-          </svg>
-        </a>
-
-        <a href="#" style="font-size:13px;color:var(--muted);margin-left:auto; text-decoration:none;">Privacy ·
-          Terms</a>
+          Learn More
+        </button>
       </div>
-    </aside>
-  </main>
+      <div class="adLine">
+        <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+</svg>
+Learn Skills</div>
+        <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+</svg>
+Roadmap</div>
+        <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+</svg>
+Raizian Ai</div>
+        <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0" />
+</svg>
+Rewards</div>
+        <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+</svg>
+Free Assets</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content2" id="features">
+    <div class="title">
+      <h1 class="reveal delay-1">The <span class="shiny-text">Vision</span></h1>
+      <p class="reveal delay-2">“Empowering the next generation through real, skill-based learning.</p>
+      </p>
+    </div>
+
+    <div class="service-card-container">
+
+      <div class="reveal">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+</svg>
+
+          </div>
+          <h3>Skill Empowerment</h3>
+          <p>Master rewardable, high-impact skills that give you power, independence, and control over your journey.
+          </p>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+</svg>
+
+          </div>
+          <h3>Earn While You Learn</h3>
+          <p>Turn every skill you acquire into real opportunities to earn, build, and create your future. Don't just LEARN, EARN also.</p>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+</svg>
+
+          </div>
+          <h3>Personal Growth</h3>
+          <p>Grow beyond skills — boost your confidence, creativity, and personality to thrive in every challenge.</p>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
+</svg>
+
+          </div>
+          <h3>Future-Ready Youth</h3>
+          <p>Step into the world prepared. Equip yourself with skills that set you apart and make you unstoppable</p>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+    <div class="content3">
+       <div class="title">
+      <h1 class="reveal delay-1">Stay <span class="shiny-text">Connected</span></h1>
+      <p class="reveal delay-2">Subscribe to our newsletter for the latest updates, tips, and exclusive offers.</p>
+      </p>
+    </div>
+
+    <section>
+
+      <div class="contact-form">
+        <h1>Stay tuned for a great grand launching</h1>
+        <p>Subscribe to our newsletter for the latest updates, tips, and exclusive offers.</p>
+        <form action="https://formspree.io/f/xldoqlgg" method="POST">
+          <input type="email" name="Email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
+      </section>
+
+    </div>
+
+
+    <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="raizianlogo.png" alt="Raizian Logo" style="width: 40px; border-radius: 10px;">
+        <label class="shiny-text">Raizian</label>
+      </div>
+      <div class="footer-links">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div class="footer-info">
+        <p>© 2024 Raizian. All rights reserved.</p>
+        <p>Designed with ❤️ by the Raizian Team.</p>
+      </div>
+    </footer>
+
 
   <script src="app.js"></script>
 </body>
-
 
 </html>
