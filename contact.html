@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Raizian</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 antialiased">
+
+    <!-- Header/Nav Placeholder -->
+    <header class="absolute top-0 left-0 right-0 z-10 p-6">
+        <nav class="container mx-auto max-w-6xl flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tight">
+                Raizian
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="/index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                <a href="/about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a>
+                <a href="/contact.html" class="text-white font-medium transition-colors">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="relative min-h-[50vh] flex items-center justify-center text-center overflow-hidden px-4 pt-32 pb-16">
+            <!-- Background Image Placeholder -->
+            <img 
+                src="https://placehold.co/1920x1080/111827/444444?text=Raizian+Connect" 
+                alt="Abstract connection lines" 
+                class="absolute top-0 left-0 w-full h-full object-cover opacity-30"
+                onerror="this.src='https://placehold.co/1920x1080/111827/444444?text=Image+Error'"
+            >
+            <!-- Gradient Overlay -->
+            <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-gray-900 to-transparent"></div>
+
+            <div class="relative z-10 max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">
+                    Get in Touch
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                    We're here to answer your questions and help you start your learning journey. Reach out to us anytime.
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Contact Form Section -->
+        <section class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto max-w-3xl px-6">
+                
+                <!-- Contact Form -->
+                <div class="bg-slate-800 p-8 md:p-12 rounded-lg shadow-2xl border border-slate-700">
+                    <h2 class="text-3xl font-bold text-cyan-400 mb-8">Send Us a Message</h2>
+                    
+                    <form id="contact-form" action="https://formspree.io/f/xldoqlgg" method="POST">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Full Name -->
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                                <input type="text" name="name" id="name" required
+                                       class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder-gray-400">
+                            </div>
+                            <!-- Email Address -->
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                                <input type="email" name="email" id="email" required
+                                       class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder-gray-400">
+                            </div>
+                        </div>
+                        
+                        <!-- Subject -->
+                        <div class="mt-6">
+                            <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                            <input type="text" name="subject" id="subject" required
+                                   class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder-gray-400">
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mt-6">
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+                            <textarea name="message" id="message" rows="6" required
+                                      class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 placeholder-gray-400"></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="mt-8 text-right">
+                            <button id="submit-btn" type="submit"
+                                    class="inline-block bg-cyan-500 text-gray-900 font-medium py-3 px-8 rounded-lg shadow-lg hover:bg-cyan-400 transition-colors duration-300 disabled:bg-gray-500">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Submission Status Message -->
+                    <div id="status-message" class="mt-6 text-lg font-medium text-center hidden"></div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700/50">
+        <div class="container mx-auto max-w-6xl px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-lg font-semibold">Raizian</p>
+                    <p class="text-sm text-gray-400">© 2025 All Rights Reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.youtube.com/@raizianoff" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+                    <a href="https://www.instagram.com/raizian.legacy" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                    <a href="https://pin.it/56joAIEWa" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">Pinterest</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Submission Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contact-form');
+            const submitButton = document.getElementById('submit-btn');
+            const statusMessage = document.getElementById('status-message');
+
+            if (!form) return;
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault(); // Prevent default form submission
+                
+                // Disable button and show loading text
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+
+                const formData = new FormData(form);
+                
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json' // Request JSON response from Formspree
+                        }
+                    });
+
+                    if (response.ok) {
+                        // Success
+                        form.reset(); // Clear the form
+                        statusMessage.textContent = 'Thank you! Your message has been sent successfully.';
+                        statusMessage.className = 'mt-6 text-lg font-medium text-center text-green-400';
+                    } else {
+                        // Server-side error (e.g., Formspree config issue)
+                        const data = await response.json();
+                        const errorMessage = data.errors?.map(err => err.message).join(', ') || 'An unknown error occurred.';
+                        statusMessage.textContent = `Error: ${errorMessage}. Please try again.`;
+                        statusMessage.className = 'mt-6 text-lg font-medium text-center text-red-400';
+                    }
+                } catch (error) {
+                    // Network error
+                    console.error('Submission Error:', error);
+                    statusMessage.textContent = 'A network error occurred. Please check your connection and try again.';
+                    statusMessage.className = 'mt-6 text-lg font-medium text-center text-red-400';
+                } finally {
+                    // Re-enable button
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Send Message';
+                    
+                    // Show the status message
+                    statusMessage.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

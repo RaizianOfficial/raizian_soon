@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Raizian</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Apply the Inter font */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* A subtle gradient for the hero */
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0) 0%, #111827 100%);
+    }
+
+    /* Styling for AI-generated content */
+    #roadmap-result {
+      /* Updated for a more "premium" look */
+      @apply bg-slate-800 p-6 md:p-8 rounded-lg mt-8 text-left hidden shadow-inner border border-slate-600;
+    }
+
+    #roadmap-result h3 {
+      @apply text-xl font-semibold text-amber-400 mb-4 mt-5 pb-2 border-b border-slate-600;
+    }
+
+    #roadmap-result h4 {
+      @apply text-lg font-semibold text-gray-100 mb-2 mt-4;
+    }
+
+    #roadmap-result ul {
+      @apply list-disc list-inside text-gray-300 space-y-2 pl-2;
+    }
+
+    #roadmap-result p {
+      @apply text-lg text-gray-200;
+    }
+
+    /* Added style for b, i, u tags */
+    #roadmap-result b {
+      @apply font-semibold text-gray-100;
+    }
+
+    #roadmap-result i {
+      @apply text-amber-400 opacity-90;
+    }
+
+    #roadmap-result u {
+      @apply text-gray-300;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 antialiased">
+
+  <header class="absolute top-0 left-0 right-0 z-10 p-6">
+    <nav class="container mx-auto max-w-6xl flex justify-between items-center">
+      <div class="text-2xl font-bold tracking-tight">
+        Raizian
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="/index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
+        <a href="/about.html" class="text-white font-medium transition-colors">About Us</a>
+        <a href="/contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section
+      class="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center text-center overflow-hidden px-4 pt-32 pb-16">
+      <img src="https://placehold.co/1920x1080/111827/444444?text=Raizian+Workspace" alt="Our modern office workspace"
+        class="absolute top-0 left-0 w-full h-full object-cover opacity-30"
+        onerror="this.src='https://placehold.co/1920x1080/111827/444444?text=Image+Error'">
+      <div class="absolute bottom-0 left-0 w-full h-1/2 hero-gradient"></div>
+
+      <div class="relative z-10 max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">
+          We're building the future of skill learning.
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+          Raizian is a next-generation skill learning platform that empowers learners to master practical,
+          industry-focused skills.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-32 bg-gray-900">
+      <div class="container mx-auto max-w-6xl px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div class="rounded-lg overflow-hidden shadow-2xl">
+            <img src="https://placehold.co/800x600/1f2937/9ca3af?text=Our+Mission" alt="A collaborative team meeting"
+              class="w-full h-full object-cover"
+              onerror="this.src='https://placehold.co/800x600/1f2937/9ca3af?text=Image+Error'">
+          </div>
+          <div class="lg:pl-8">
+            <span class="text-sm font-semibold text-amber-400 uppercase tracking-wider">Our Mission & Vision</span>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2 mb-6">
+              Bridging the Gap Between Knowledge & Application
+            </h2>
+            <div class="space-y-4 text-gray-300 text-lg">
+              <p>
+                Our mission is to bridge the gap between knowledge and real-world application through AI-driven
+                mentorship and expert human guidance.
+              </p>
+              <p>
+                We believe in a future where learning is personalized, practical, and accessible to all. Raizian brings
+                together the best of technology and mentorship to help learners build confidence, create impact, and
+                succeed in their chosen paths.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-32 bg-slate-900">
+      <div class="container mx-auto max-w-6xl px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-sm font-semibold text-amber-400 uppercase tracking-wider">What Makes Us Different</span>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2">
+            Why Learners Choose Raizian
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          <div
+            class="bg-gray-800 p-8 rounded-lg shadow-lg text-center md:text-left transform hover:-translate-y-2 transition-transform duration-300">
+            <div class="flex justify-center md:justify-start mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0cf"
+                class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+              </svg>
+
+            </div>
+            <h3 class="text-xl font-semibold mb-2">AI-Powered Guidance</h3>
+            <p class="text-gray-300">
+              AI-powered guidance tailored to each learner’s journey.
+            </p>
+          </div>
+          <div
+            class="bg-gray-800 p-8 rounded-lg shadow-lg text-center md:text-left transform hover:-translate-y-2 transition-transform duration-300">
+            <div class="flex justify-center md:justify-start mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0cf"
+                class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+              </svg>
+
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Expert Mentorship</h3>
+            <p class="text-gray-300">
+              Mentorship from certified industry professionals.
+            </p>
+          </div>
+          <div
+            class="bg-gray-800 p-8 rounded-lg shadow-lg text-center md:text-left transform hover:-translate-y-2 transition-transform duration-300">
+            <div class="flex justify-center md:justify-start mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0cf"
+                class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+              </svg>
+
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Practical Application</h3>
+            <p class="text-gray-300">
+              Hands-on projects and real skill validation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-32 bg-gray-900">
+      <div class="container mx-auto max-w-6xl px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-sm font-semibold text-amber-400 uppercase tracking-wider">Our Team</span>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2">
+            Learners, Creators, and Innovators
+          </h2>
+        </div>
+
+        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-center">
+          Raizian is built by a passionate team of learners, creators, and innovators who believe in the power of
+          education. Our goal is simple — make learning more human, smarter, and outcome-focused.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-32 bg-slate-900">
+      <div class="container mx-auto max-w-3xl px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+          ✨ Discover Your Learning Path
+        </h2>
+        <p class="text-lg text-gray-300 mb-8">
+          Not sure where to start? Let our AI mentor draft a high-level roadmap for your career goal.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+          <input type="text" id="goal-input" placeholder="E.g., 'Data Scientist' or 'UI/UX Designer'"
+            class="flex-grow w-full px-5 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-amber-500 placeholder-gray-400">
+          <button id="generate-btn"
+            class="inline-block bg-amber-500 text-gray-900 font-medium py-3 px-8 rounded-lg shadow-lg hover:bg-amber-400 transition-colors duration-300 shrink-0">
+            Generate Roadmap
+          </button>
+        </div>
+
+        <div id="roadmap-loading" class="text-gray-300 mt-8 hidden">
+          <svg class="animate-spin h-6 w-6 text-amber-500 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+            </path>
+          </svg>
+          <p class="mt-2">Generating your custom roadmap...</p>
+        </div>
+        <div id="roadmap-result" class="bg-gray-800 p-6 md:p-8 rounded-lg mt-8 text-left hidden shadow-inner">
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 md:py-32 bg-gray-900">
+      <div class="container mx-auto max-w-3xl px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+          Start Your Learning Journey
+        </h2>
+        <p class="text-lg text-gray-300 mb-8">
+          Ready to master new skills and build your future? Explore our platform or get in touch with our team.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="/index.html"
+            class="inline-block bg-amber-500 text-gray-900 font-medium py-3 px-8 rounded-lg shadow-lg hover:bg-amber-400 transition-colors duration-300">
+            Explore Courses
+          </a>
+          <a href="/contact.html"
+            class="inline-block bg-gray-800 text-white font-medium py-3 px-8 rounded-lg shadow-lg hover:bg-gray-700 transition-colors duration-300">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-gray-900 border-t border-gray-700/50">
+    <div class="container mx-auto max-w-6xl px-6 py-12">
+      <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+        <div class="mb-4 md:mb-0">
+          <p class="text-lg font-semibold">Raizian</p>
+          <p class="text-sm text-gray-400">© 2025 All Rights Reserved.</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="https://www.instagram.com/raizian.legacy"
+            class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+          <a href="https://www.youtube.com/@raizianoff"
+            class="text-gray-400 hover:text-white transition-colors">Youtube</a>
+          <a href="https://pin.it/56joAIEWa" class="text-gray-400 hover:text-white transition-colors">Pintrest</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    const generateBtn = document.getElementById('generate-btn');
+    const goalInput = document.getElementById('goal-input');
+    const roadmapResult = document.getElementById('roadmap-result');
+    const roadmapLoading = document.getElementById('roadmap-loading');
+
+    const apiKey = "AIzaSyBHY4aj0thqieGrAVgvYPKwNuPBqpAiXsI"; // API key is handled by the environment
+
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+    // System prompt to guide the AI
+    const systemPrompt = `
+            🧠 SYSTEM PROMPT:
+            You are Raizian AI (Raizian Mentor Core v1.0), the official mentor intelligence of the Raizian Skill Learning Platform.
+            Your mission is to guide learners through a personalized, realistic, and goal-driven roadmap that helps them learn, grow, and succeed in their chosen skill domain.
+            Your tone must be insightful, encouraging, clear, and future-focused.
+
+            🎯 Core Principles:
+            1.  **Outcome-Oriented Thinking:** Always understand what the user wants to *achieve* (e.g., "become a data analyst," not just "learn Python").
+            2.  **Structured Roadmap Design:** Every roadmap MUST include 4 stages: Foundation, Skill Expansion, Mastery, and Launch.
+            3.  **Realism + Clarity:** Every step should have a clear goal, estimated time frame, recommended resources, and mini-projects.
+            4.  **Adaptability:** Match your tone and roadmap difficulty to the user’s perceived experience.
+            5.  **Future Focus:** Prepare users for what’s coming next in the field (e.g., AI integration, new trends).
+            6.  **Voice & Personality:** Act like a mentor: motivating, clear, confident. Use the tagline style tone: “You’re not just learning — you’re evolving.”
+            7.  **Data Safety & Ethics:** Never request or store personal details.
+
+            ⚡ MANDATORY HTML Output Format:
+            You MUST format your response as a simple, well-organized HTML fragment. Do NOT include <html>, <head>, or <body> tags.
+            You MUST use <b> for bolding, <i> for emphasis (like duration), and <u> for key tools/technologies.
+            You MUST use <h4> for sub-sections within a phase.
+            
+            Follow this structure precisely:
+
+            <p class="text-lg text-gray-200">Here is your personalized roadmap. <i>You’re not just learning — you’re evolving.</i></p>
+            <p><b>Goal:</b> [The user's goal, clarified]</p>
+            <p><b>Duration:</b> <i>[Your estimated duration, e.g., "24 Weeks (Flexible Pace)"]</i></p>
+
+            <h3>Phase 1: Foundation (Weeks [e.g., 1–4])</h3>
+            <h4>Key Skills</h4>
+            <ul>
+                <li>Learn <u>HTML</u>, <u>CSS</u>, and <u>JavaScript</u> basics.</li>
+                <li>Understand the core concepts of [Domain].</li>
+            </ul>
+            <h4>Projects & Milestones</h4>
+            <ul>
+                <li><b>Milestone:</b> Build a simple [Project Idea, e.g., 'Portfolio Page'].</li>
+            </ul>
+            <h4>Tools</h4>
+            <ul>
+                <li>Master <u>VS Code</u> and <u>GitHub</u>.</li>
+            </ul>
+
+            <h3>Phase 2: Skill Expansion (Weeks [e.g., 5–10])</h3>
+            <h4>Key Skills</h4>
+            <ul>
+                <li>Learn [Intermediate Skill 1, e.g., <u>React.js</u>].</li>
+                <li>Explore [Intermediate Skill 2, e.g., <u>Tailwind CSS</u>].</li>
+            </ul>
+            <h4>Projects & Milestones</h4>
+            <ul>
+                <li><b>Project:</b> Build a [Intermediate project idea, e.g., 'Personal Dashboard App'].</li>
+                <li>Learn version control & deployment (<u>Vercel</u> or <u>Netlify</u>).</li>
+            </ul>
+
+            <h3>Phase 3: Mastery (Weeks [e.g., 11–18])</h3>
+            <h4>Key Skills</h4>
+            <ul>
+                <li>Master [Advanced Topic 1, e.g., APIs, Auth, Routing].</li>
+                <li>Dive into [Advanced Topic 2, e.g., State Management].</li>
+            </ul>
+            <h4>Projects & Milestones</h4>
+            <ul>
+                <li><b>Build 2-3 mini-projects:</b> <u>Weather App</u>, <u>Notes App</u>, <u>Task Tracker</u>.</li>
+                <li>Contribute to an <i>open-source project</i>.</li>
+            </ul>
+
+            <h3>Phase 4: Launch (Weeks [e.g., 19–24])</h3>
+            <h4>Key Skills</h4>
+            <ul>
+                <li>Portfolio polish and optimization.</li>
+                <li>Interview preparation and soft skills.</li>
+            </ul>
+            <h4>Projects & Milestones</h4>
+            <ul>
+                <li><b>Launch:</b> Host your final portfolio site.</li>
+                <li><b>Network:</b> Polish your <u>LinkedIn</u> & <u>GitHub</u> profiles.</li>
+                <li>Start applying for <i>internships or freelance gigs</i>.</li>
+            </ul>
+
+            <p class="text-amber-400 font-semibold mt-4"><b>Raizian Tip:</b> “Don’t chase perfection. Chase consistency — skill compounds faster than confidence.”</p>
+        `;
+
+    /**
+     * Utility function for exponential backoff retries.
+     * @param {function} fn - The async function to retry.
+     * @param {number} maxRetries - Maximum number of retries.
+     * @param {number} baseDelay - Base delay in ms.
+     */
+    async function exponentialBackoff(fn, maxRetries = 5, baseDelay = 1000) {
+      let attempt = 0;
+      while (attempt < maxRetries) {
+        try {
+          return await fn();
+        } catch (error) {
+          if (attempt === maxRetries - 1) throw error;
+          attempt++;
+          const delay = baseDelay * (2 ** (attempt - 1)) + Math.random() * 1000;
+          // Do not log retry attempts to the console
+          await new Promise(resolve => setTimeout(resolve, delay));
+        }
+      }
+    }
+
+    /**
+     * Fetches the roadmap from the Gemini API.
+     * @param {string} userGoal - The career goal from the user.
+     */
+    async function generateRoadmap(userGoal) {
+      const payload = {
+        contents: [{
+          parts: [{ text: `Generate a learning roadmap for the goal: "${userGoal}"` }]
+        }],
+        systemInstruction: {
+          parts: [{ text: systemPrompt }]
+        },
+      };
+
+      const apiCall = async () => {
+        const response = await fetch(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!response.ok) {
+          throw new Error(`API request failed with status ${response.status}`);
+        }
+        return response.json();
+      };
+
+      try {
+        const result = await exponentialBackoff(apiCall);
+        const candidate = result.candidates?.[0];
+
+        if (candidate && candidate.content?.parts?.[0]?.text) {
+          return candidate.content.parts[0].text;
+        } else {
+          throw new Error("Invalid response structure from API.");
+        }
+      } catch (error) {
+        console.error("Error generating roadmap:", error);
+        return "<p class='text-red-400'>Sorry, we couldn't generate a roadmap at this time. Please try again later.</p>";
+      }
+    }
+
+    // Event Listener for the button
+    generateBtn.addEventListener('click', async () => {
+      const goal = goalInput.value.trim();
+      if (!goal) {
+        roadmapResult.innerHTML = "<p class='text-amber-400'>Please enter a career goal to get started.</p>";
+        roadmapResult.classList.remove('hidden');
+        return;
+      }
+
+      // Show loading state
+      roadmapLoading.classList.remove('hidden');
+      roadmapResult.classList.add('hidden');
+      generateBtn.disabled = true;
+
+      // Get content
+      const generatedHtml = await generateRoadmap(goal);
+
+      // Hide loading state
+      roadmapLoading.classList.add('hidden');
+
+      // Display result
+      roadmapResult.innerHTML = generatedHtml;
+      roadmapResult.classList.remove('hidden');
+      generateBtn.disabled = false;
+    });
+
+  </script>
+
+</body>
+
+</html>
