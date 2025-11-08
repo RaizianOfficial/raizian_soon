@@ -66,6 +66,7 @@
       </div>
       <div class="hidden md:flex space-x-8">
         <a href="/index.html" class="text-gray-300 hover:text-white transition-colors">Home</a>
+        <a href="https://ai.raizian.in" class="text-gray-300 hover:text-white transition-colors">Raizian AI</a>
         <a href="/about.html" class="text-white font-medium transition-colors">About Us</a>
         <a href="/contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a>
       </div>
@@ -270,187 +271,20 @@
   </footer>
 
   <script type="module">
-    const generateBtn = document.getElementById('generate-btn');
-    const goalInput = document.getElementById('goal-input');
-    const roadmapResult = document.getElementById('roadmap-result');
-    const roadmapLoading = document.getElementById('roadmap-loading');
+    // Wait for the DOM to load
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("generate-btn");
 
-    const apiKey = "AIzaSyBHY4aj0thqieGrAVgvYPKwNuPBqpAiXsI"; // API key is handled by the environment
-
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-
-    // System prompt to guide the AI
-    const systemPrompt = `
-            🧠 SYSTEM PROMPT:
-            You are Raizian AI (Raizian Mentor Core v1.0), the official mentor intelligence of the Raizian Skill Learning Platform.
-            Your mission is to guide learners through a personalized, realistic, and goal-driven roadmap that helps them learn, grow, and succeed in their chosen skill domain.
-            Your tone must be insightful, encouraging, clear, and future-focused.
-
-            🎯 Core Principles:
-            1.  **Outcome-Oriented Thinking:** Always understand what the user wants to *achieve* (e.g., "become a data analyst," not just "learn Python").
-            2.  **Structured Roadmap Design:** Every roadmap MUST include 4 stages: Foundation, Skill Expansion, Mastery, and Launch.
-            3.  **Realism + Clarity:** Every step should have a clear goal, estimated time frame, recommended resources, and mini-projects.
-            4.  **Adaptability:** Match your tone and roadmap difficulty to the user’s perceived experience.
-            5.  **Future Focus:** Prepare users for what’s coming next in the field (e.g., AI integration, new trends).
-            6.  **Voice & Personality:** Act like a mentor: motivating, clear, confident. Use the tagline style tone: “You’re not just learning — you’re evolving.”
-            7.  **Data Safety & Ethics:** Never request or store personal details.
-
-            ⚡ MANDATORY HTML Output Format:
-            You MUST format your response as a simple, well-organized HTML fragment. Do NOT include <html>, <head>, or <body> tags.
-            You MUST use <b> for bolding, <i> for emphasis (like duration), and <u> for key tools/technologies.
-            You MUST use <h4> for sub-sections within a phase.
-            
-            Follow this structure precisely:
-
-            <p class="text-lg text-gray-200">Here is your personalized roadmap. <i>You’re not just learning — you’re evolving.</i></p>
-            <p><b>Goal:</b> [The user's goal, clarified]</p>
-            <p><b>Duration:</b> <i>[Your estimated duration, e.g., "24 Weeks (Flexible Pace)"]</i></p>
-
-            <h3>Phase 1: Foundation (Weeks [e.g., 1–4])</h3>
-            <h4>Key Skills</h4>
-            <ul>
-                <li>Learn <u>HTML</u>, <u>CSS</u>, and <u>JavaScript</u> basics.</li>
-                <li>Understand the core concepts of [Domain].</li>
-            </ul>
-            <h4>Projects & Milestones</h4>
-            <ul>
-                <li><b>Milestone:</b> Build a simple [Project Idea, e.g., 'Portfolio Page'].</li>
-            </ul>
-            <h4>Tools</h4>
-            <ul>
-                <li>Master <u>VS Code</u> and <u>GitHub</u>.</li>
-            </ul>
-
-            <h3>Phase 2: Skill Expansion (Weeks [e.g., 5–10])</h3>
-            <h4>Key Skills</h4>
-            <ul>
-                <li>Learn [Intermediate Skill 1, e.g., <u>React.js</u>].</li>
-                <li>Explore [Intermediate Skill 2, e.g., <u>Tailwind CSS</u>].</li>
-            </ul>
-            <h4>Projects & Milestones</h4>
-            <ul>
-                <li><b>Project:</b> Build a [Intermediate project idea, e.g., 'Personal Dashboard App'].</li>
-                <li>Learn version control & deployment (<u>Vercel</u> or <u>Netlify</u>).</li>
-            </ul>
-
-            <h3>Phase 3: Mastery (Weeks [e.g., 11–18])</h3>
-            <h4>Key Skills</h4>
-            <ul>
-                <li>Master [Advanced Topic 1, e.g., APIs, Auth, Routing].</li>
-                <li>Dive into [Advanced Topic 2, e.g., State Management].</li>
-            </ul>
-            <h4>Projects & Milestones</h4>
-            <ul>
-                <li><b>Build 2-3 mini-projects:</b> <u>Weather App</u>, <u>Notes App</u>, <u>Task Tracker</u>.</li>
-                <li>Contribute to an <i>open-source project</i>.</li>
-            </ul>
-
-            <h3>Phase 4: Launch (Weeks [e.g., 19–24])</h3>
-            <h4>Key Skills</h4>
-            <ul>
-                <li>Portfolio polish and optimization.</li>
-                <li>Interview preparation and soft skills.</li>
-            </ul>
-            <h4>Projects & Milestones</h4>
-            <ul>
-                <li><b>Launch:</b> Host your final portfolio site.</li>
-                <li><b>Network:</b> Polish your <u>LinkedIn</u> & <u>GitHub</u> profiles.</li>
-                <li>Start applying for <i>internships or freelance gigs</i>.</li>
-            </ul>
-
-            <p class="text-amber-400 font-semibold mt-4"><b>Raizian Tip:</b> “Don’t chase perfection. Chase consistency — skill compounds faster than confidence.”</p>
-        `;
-
-    /**
-     * Utility function for exponential backoff retries.
-     * @param {function} fn - The async function to retry.
-     * @param {number} maxRetries - Maximum number of retries.
-     * @param {number} baseDelay - Base delay in ms.
-     */
-    async function exponentialBackoff(fn, maxRetries = 5, baseDelay = 1000) {
-      let attempt = 0;
-      while (attempt < maxRetries) {
-        try {
-          return await fn();
-        } catch (error) {
-          if (attempt === maxRetries - 1) throw error;
-          attempt++;
-          const delay = baseDelay * (2 ** (attempt - 1)) + Math.random() * 1000;
-          // Do not log retry attempts to the console
-          await new Promise(resolve => setTimeout(resolve, delay));
-        }
-      }
+    if (button) {
+      button.addEventListener("click", () => {
+        // Redirect to your target URL
+        window.location.href = "https://ai.raizian.in";
+      });
     }
-
-    /**
-     * Fetches the roadmap from the Gemini API.
-     * @param {string} userGoal - The career goal from the user.
-     */
-    async function generateRoadmap(userGoal) {
-      const payload = {
-        contents: [{
-          parts: [{ text: `Generate a learning roadmap for the goal: "${userGoal}"` }]
-        }],
-        systemInstruction: {
-          parts: [{ text: systemPrompt }]
-        },
-      };
-
-      const apiCall = async () => {
-        const response = await fetch(apiUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        if (!response.ok) {
-          throw new Error(`API request failed with status ${response.status}`);
-        }
-        return response.json();
-      };
-
-      try {
-        const result = await exponentialBackoff(apiCall);
-        const candidate = result.candidates?.[0];
-
-        if (candidate && candidate.content?.parts?.[0]?.text) {
-          return candidate.content.parts[0].text;
-        } else {
-          throw new Error("Invalid response structure from API.");
-        }
-      } catch (error) {
-        console.error("Error generating roadmap:", error);
-        return "<p class='text-red-400'>Sorry, we couldn't generate a roadmap at this time. Please try again later.</p>";
-      }
-    }
-
-    // Event Listener for the button
-    generateBtn.addEventListener('click', async () => {
-      const goal = goalInput.value.trim();
-      if (!goal) {
-        roadmapResult.innerHTML = "<p class='text-amber-400'>Please enter a career goal to get started.</p>";
-        roadmapResult.classList.remove('hidden');
-        return;
-      }
-
-      // Show loading state
-      roadmapLoading.classList.remove('hidden');
-      roadmapResult.classList.add('hidden');
-      generateBtn.disabled = true;
-
-      // Get content
-      const generatedHtml = await generateRoadmap(goal);
-
-      // Hide loading state
-      roadmapLoading.classList.add('hidden');
-
-      // Display result
-      roadmapResult.innerHTML = generatedHtml;
-      roadmapResult.classList.remove('hidden');
-      generateBtn.disabled = false;
-    });
-
+  });
   </script>
 
 </body>
+
 
 </html>
